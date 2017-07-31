@@ -10,16 +10,18 @@ public class SingleLink implements Ilinetable {
 	private Student singleLink;
 
 	/**
-	 * run result:
-	 * Single List is empty:false
-		第３个元素是：thrid
-		new Student("four","4"):5
-		Single List length:8
-		delete elem is :six
-		Single List length:7
-		Single List is empty after clear:true
-		Single List length:0
- 
+	 * run result: 
+	 * Single List is empty:false 
+	 * 第3个元素是：eight 
+	 * 第4个元素是：thrid 
+	 * new Student("four","4"):5 
+	 * Single List length:8 
+	 * delete elem is :seven 
+	 * Single List length:7 
+	 * Single List is empty after clear:true 
+	 * Single List length:0
+	 * 
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -39,7 +41,8 @@ public class SingleLink implements Ilinetable {
 		System.out.println("new Student(\"four\",\"4\"):"
 				+ singleLink.LocateElem(new Student("four", "4")));
 		System.out.println("Single List length:" + singleLink.ListLength());
-		System.out.println("delete elem is :" + singleLink.ListDelete(8).name);;
+		System.out.println("delete elem is :" + singleLink.ListDelete(8).name);
+		;
 		System.out.println("Single List length:" + singleLink.ListLength());
 		singleLink.ClearList();
 		System.out.println("Single List is empty after clear:"
