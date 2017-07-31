@@ -9,24 +9,37 @@ package com.general.arithmetic.linetable;
 public class SingleLink implements Ilinetable {
 	private Student singleLink;
 
+	/**
+	 * run result:
+	 * Single List is empty:false
+		第３个元素是：thrid
+		new Student("four","4"):5
+		Single List length:8
+		delete elem is :six
+		Single List length:7
+		Single List is empty after clear:true
+		Single List length:0
+ 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		SingleLink singleLink = new SingleLink();
 		singleLink.InitList();
 		singleLink.ListInsert(1, new Student("first", "1"));
 		singleLink.ListInsert(2, new Student("second", "2"));
 		singleLink.ListInsert(3, new Student("thrid", "3"));
-//		singleLink.ListInsert(4, new Student("four", "4"));
-//		singleLink.ListInsert(5, new Student("five", "5"));
-//		singleLink.ListInsert(6, new Student("six", "6"));
-//		singleLink.ListInsert(7, new Student("seven", "7"));
+		singleLink.ListInsert(4, new Student("four", "4"));
+		singleLink.ListInsert(5, new Student("five", "5"));
+		singleLink.ListInsert(6, new Student("six", "6"));
+		singleLink.ListInsert(7, new Student("seven", "7"));
 		singleLink.ListInsert(2, new Student("eight", "8"));
 		System.out.println("Single List is empty:" + singleLink.ListEmpty());
-		System.out.println("第３个元素是：" + singleLink.GetElem(3).name);
+		System.out.println("第3个元素是：" + singleLink.GetElem(3).name);
+		System.out.println("第4个元素是：" + singleLink.GetElem(4).name);
 		System.out.println("new Student(\"four\",\"4\"):"
 				+ singleLink.LocateElem(new Student("four", "4")));
 		System.out.println("Single List length:" + singleLink.ListLength());
-		System.out.println("delete elem is :" + singleLink.ListDelete(8).name);
-		;
+		System.out.println("delete elem is :" + singleLink.ListDelete(8).name);;
 		System.out.println("Single List length:" + singleLink.ListLength());
 		singleLink.ClearList();
 		System.out.println("Single List is empty after clear:"
@@ -105,11 +118,10 @@ public class SingleLink implements Ilinetable {
 	/** 在第i个位置插入新元素 student **/
 	@Override
 	public void ListInsert(int i, Student student) {
-		int location = 0;
+		int location = 1;
 		if (singleLink != null) {
 			Student previous = singleLink.next;
 			while (location != i) {
-				
 				if (previous != null && previous.next != null) {
 					previous = previous.next;
 				}
@@ -135,17 +147,18 @@ public class SingleLink implements Ilinetable {
 		int location = 0;
 		Student delete = null;
 		if (singleLink != null && singleLink.next != null) {
-			Student temp = singleLink;
+			Student temp = singleLink.next;
 			while (temp != null) {
+				location++;
 				if (location == i) {
 					break;
-				} else {
-					location++;
-					temp = temp.next;
 				}
+				temp = temp.next;
+
 			}
-			delete = temp;
+			delete = temp.next;
 			temp.next = temp.next.next;
+
 		}
 		return delete;
 	}
