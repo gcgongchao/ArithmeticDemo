@@ -10,7 +10,7 @@ import java.util.Stack;
  *
  */
 public class GetMinStack {
-	/**����������3,4,5,1,2,1����ѹ��**/
+
 	public static void main(String[] args) {
 		MyStack2 myStack2=new MyStack2();
 		myStack2.push(3);

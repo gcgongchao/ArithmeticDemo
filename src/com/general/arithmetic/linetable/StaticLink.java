@@ -22,6 +22,7 @@ public class StaticLink implements Ilinetable{
 			for (int i = 0; i < lastElem; i++) {
 				staticLink[i] = new Student(i + 1);
 			}
+			//数组最后一个元素的cur用来存放第一个插入元素的下标，相当于头结点
 			staticLink[lastElem] = new Student(0);
 		}
 	}
@@ -30,9 +31,9 @@ public class StaticLink implements Ilinetable{
 	public boolean ListEmpty() {
 		// TODO Auto-generated method stub
 		if(staticLink[lastElem].cur==0){
-			return false;
-		}else{
 			return true;
+		}else{
+			return false;
 		}
 	}
 
