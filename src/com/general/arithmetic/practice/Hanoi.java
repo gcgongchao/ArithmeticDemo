@@ -1,6 +1,7 @@
 package com.general.arithmetic.practice;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Stack;
 
 /***
@@ -17,6 +18,7 @@ import java.util.Stack;
  * **/
 public class Hanoi {
     public static  int count=0;
+
     public static Stack<Integer> plate=new Stack<Integer>();
     public static int PLATE_COUNT=3;
 

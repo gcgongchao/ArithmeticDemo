@@ -11,11 +11,12 @@ import java.util.Arrays;
  *
  */
 public class QuickSort {
-	static int wait_sort[]=new int[]{50,10,90,30,70,40,80,60,20};
+	static int wait_sort[]=new int[]{50,10,90,30,70,40,80,60,20,99};
 	public static void main(String[] args) {
 		System.out.println(Arrays.toString(wait_sort));
 		QSort(0, wait_sort.length-1);
 		System.out.println(Arrays.toString(wait_sort));
+
 	}
 	static void QSort(int low,int high){
 		int pivot;
